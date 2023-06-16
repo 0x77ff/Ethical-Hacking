@@ -1,14 +1,17 @@
 import tkinter as tk
 from encrypt import encrypt
+import pyperclip
 
 window = tk.Tk()
 window.title("Ceaser Cipher")
 window.resizable(0,0)
 window.geometry("500x500")
+strtext=' '
 
 def generate():
     print(encrypt(entry1.get(),int(entry2.get())))
     output.config(text=encrypt(entry1.get(),int(entry2.get())))
+    pyperclip.copy(strtext.join(map(str,encrypt(entry1.get(),int(entry2.get())))))
 
 text1 = tk.Label(window,text='Input Text')
 entry1 = tk.Entry(window)
