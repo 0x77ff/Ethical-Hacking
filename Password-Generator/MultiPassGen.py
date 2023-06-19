@@ -16,7 +16,7 @@ def generatepass(length,pamt):
     global multipassword
     for i in range(int(pamt)):
      print(password)
-     pyperclip.copy(password)
+    #pyperclip.copy(password)
      password=''
      for i in range(int(length)):
          password += ''.join(secrets.choice(alphabet))
