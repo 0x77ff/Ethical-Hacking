@@ -2,6 +2,7 @@ import secrets
 import string
 import pyperclip
 
+amt=input('>Enter Password Length: ')
 letters = string.ascii_letters
 digits = string.digits
 special_chars = string.punctuation
@@ -16,6 +17,6 @@ def generatepass(length):
     pyperclip.copy(password)  
 
 if __name__ == '__main__':
-    generatepass(12)  
+    generatepass(amt)  
        
     
